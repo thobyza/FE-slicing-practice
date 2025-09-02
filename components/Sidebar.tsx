@@ -92,7 +92,7 @@ export default function Sidebar() {
 							height={32}
 							alt={item.label}
 						></Image>
-						<span className="text-sm">{item.label}</span>
+						<span className="text-sm truncate">{item.label}</span>
 					</div>
 				</Link>
 			))}
