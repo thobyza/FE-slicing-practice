@@ -8,7 +8,7 @@ interface cartItem {
 
 export default function Cartbar({ subTotal = "0", orderCount = 0 }: cartItem) {
 	return (
-		<div className="fixed bottom-0 left-0 right-0 w-full ">
+		<div className="fixed bottom-0 left-0 right-0 w-full z-50">
 			{orderCount > 0 && (
 				<div className="flex gap-4 bg-[#F5F5F5] p-4 overflow-y-auto scrollbar-hidden">
 					{checkoutItems.map((item, i) => (
