@@ -33,6 +33,14 @@
   }
 } */
 
+body {
+	background: var(--background);
+	color: var(--foreground);
+	/* font-family: Arial, Helvetica, sans-serif; */
+	font-family: var(--font-inter, sans-serif);
+}
+
+/* #region Font Colors */
 .font-primary {
 	color: var(--font-primary);
 }
@@ -48,16 +56,53 @@
 .font-neutral-2 {
 	color: var(--font-neutral-2);
 }
+/* #endregion Font Colors */
 
-body {
-	background: var(--background);
-	color: var(--foreground);
-	/* font-family: Arial, Helvetica, sans-serif; */
-	font-family: var(--font-inter, sans-serif);
+/* #region Button template */
+[class*="btn-"] {
+	@apply py-2.5 px-4 rounded-xl font-medium text-nowrap cursor-pointer transition duration-200 ease-in;
+}
+
+[class*="btn-"]:hover {
+	@apply brightness-[97%];
+}
+
+.btn-primary {
+	background-color: #F05D26;
+	color: white;
+}
+
+.btn-default {
+	background-color: #FDF3E2;
+	color: #EA9630;
+}
+
+.btn-secondary {
+	background-color: #F5F5F5;
+	color: var(--font-neutral-1);
+}
+
+.btn-tertiary {
+	background-color: transparent;
+	color: var(--font-neutral-1);
 }
 
 .button-banner {
 	background-color: color-mix(in oklab, #ffffff, transparent 70%);
 	color: white;
-	@apply py-3 px-4 rounded-xl text-xs;
+	@apply py-3 px-3 rounded-xl text-xs;
+}
+/* #endregion Button template */
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;  /* IE, Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.clip-path-polygon {
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
 }

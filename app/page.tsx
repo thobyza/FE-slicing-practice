@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Cartbar from "@/components/Cartbar";
-import MenuOne from "@/components/menuOne";
+import Menucard from "@/components/Menucard";
 
 const bannerItems = [
 	{ img: "/images/home-banner-1.png", colorGrad: "#7E2200" },
@@ -28,9 +28,15 @@ const filterItems = [
 	},
 ];
 
+const menuCardItems = [
+	{ name: "Chicken Sandwich", price: "39.000 IDR", cals: "370", img: "/images/menu/menu-chicken.png", isHot: true },
+	{ name: "Deluxe Sandwich", price: "54.000 IDR", cals: "410", img: "/images/menu/menu-deluxe.png", isBestSeller: true },
+	{ name: "Grilled Chicken Club Sandwich", price: "67.000 IDR", cals: "490", img: "/images/menu/menu-grilled.png" },
+];
+
 export default function Home() {
 	return (
-		<div className="flex flex-col w-full">
+		<section className="flex flex-col w-full">
 			{/* Title */}
 			<h1 className="text-3xl font-bold max-w-[18rem] font-dark-1">
 				What would you like today?
@@ -116,15 +122,15 @@ export default function Home() {
 			</section>
 
 			{/* Recommendation */}
-			<section className="mt-5">
+			<section className="mt-5 mb-[4.5rem]">
 				<h2 className="mb-3 text-base font-dark-1 font-normal">
 					Recommendation
 				</h2>
-				<MenuOne />
+				<Menucard menuItems={menuCardItems}/>
 			</section>
 
 			{/* Cart bar */}
-			<Cartbar />
-		</div>
+			<Cartbar subTotal="0"/>
+		</section>
 	);
 }
