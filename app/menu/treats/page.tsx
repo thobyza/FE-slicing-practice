@@ -1,11 +1,7 @@
-
+import ComingSoon from "@/components/ComingSoon";
 
 export default function TreatsPage() {
-   
-
     return (
-        <div>
-           
-        </div>
+        <ComingSoon/>
     );
 }

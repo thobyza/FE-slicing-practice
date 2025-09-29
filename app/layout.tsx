@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-	title: "Chick-Fil-A",
+	title: "Chick-Fil-Eh",
 	icons: {
     	icon: "/images/chickfil-logo.png",
   	},
