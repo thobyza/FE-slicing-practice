@@ -33,29 +33,49 @@ export default function BreakfastPage() {
             <h1 className="text-xl md:text-3xl font-bold max-w-[18rem] font-dark-1">
                Breakfast
             </h1>
-            <span className="hidden md:block mt-2 lg:mt-6 text-sm lg:text-md font-neutral-2">Breakfast is served until 12.00, get your favorites before they’re gone!</span>
+            <span className="hidden md:block mt-2 text-sm lg:text-md font-neutral-2">Breakfast is served until 12.00, get your favorites before they’re gone!</span>
             <span className="md:hidden mt-2 lg:mt-6 text-sm lg:text-md font-neutral-2">Breakfast is served until 12.00</span>
          </div>
 
          {/* Banner */}
-         <div className="h-[9.5rem] lg:h-[12rem] mt-2.5 md:mt-5 rounded-xl relative">
-            <img
-               src="/images/home-banner-3.png"
-               alt="burger background"
-               className="absolute inset-0 w-full h-full object-cover rounded-xl z-10"
-            ></img>
-            <div className="absolute inset-0 w-full h-full z-20 rounded-xl bg-linear-to-r from-[#013116] from-15% to-transparent to-50%"></div>
-            <div className="relative h-full flex flex-col items-start justify-end p-3 z-30 text-white">
-               <span className="text-xs lg:text-md font-light">Vegan burger</span>
-               <h4 className="text-lg lg:text-2xl font-semibold max-w-[10rem] lg:max-w-max leading-6 mt-1 lg:mt-2 mb-1">
-                  Taste like real chicken burger
-               </h4>
-               <button className="button-banner mt-2.5">Order now</button>
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-3">
+            <div className="hidden md:block col-span-1 h-[9.5rem] lg:h-[12rem] mt-2.5 md:mt-5 rounded-xl relative">
+               <img
+                  src="/images/home-banner-6.png"
+                  alt="burger background"
+                  className="absolute inset-0 w-full h-full object-cover rounded-xl z-10"
+               ></img>
+               <div className="absolute inset-0 w-full h-full z-20 rounded-xl bg-gradient-to-r from-[rgba(1,49,22,1)] to-transparent"></div>
+               <div className="relative h-full flex flex-col items-start justify-end p-3 z-30 text-white">
+                  <span className="text-xs lg:text-md font-light">Customer's favorite</span>
+                  <h4 className="text-lg lg:text-2xl font-semibold max-w-[10rem] lg:max-w-max leading-6 mt-1 lg:mt-2 mb-1">
+                     The Original Grilled Chicken
+                  </h4>
+
+                  <button className="button-banner mt-2.5">Order now</button>
+               </div>
+            </div>
+            <div className=" col-span-1 h-[9.5rem] lg:h-[12rem] mt-2.5 md:mt-5 rounded-xl relative">
+               <img
+                  src="/images/home-banner-4.webp"
+                  alt="burger background"
+                  className="absolute inset-0 w-full h-full object-cover rounded-xl z-10"
+               ></img>
+               <div className="absolute inset-0 w-full h-full z-20 rounded-xl bg-gradient-to-r from-[rgba(126,111,0,1)] to-transparent"></div>
+               <div className="relative h-full flex flex-col items-start justify-end p-3 z-30 text-white">
+                  <span className="text-xs lg:text-md font-light">Vegan burger</span>
+                  <h4 className="text-lg lg:text-2xl font-semibold max-w-[10rem] lg:max-w-max leading-6 mt-1 lg:mt-2 mb-1">
+                     Tastes Like a Real Chicken Burger
+                  </h4>
+                  <button className="button-banner mt-2.5">Order now</button>
+               </div>
             </div>
          </div>
+         
+         
 
          {/* Filter */}
-         <div className="py-3 mt-0.5 md:mt-3 w-full overflow-x-auto scrollbar-hidden max-w-[70vw] md:max-w-[30rem] lg:max-w-fit">
+         <div className="py-3 mt-0.5 md:mb-1 md:mt-1 w-full overflow-x-auto scrollbar-hidden max-w-[70vw] md:max-w-[30rem] lg:max-w-fit">
             <div className="flex gap-2">
                {filterItems.map((item, i) => (
                   <div 

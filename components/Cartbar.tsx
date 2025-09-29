@@ -29,7 +29,7 @@ export default function Cartbar({ subTotal = "0", orderCount = 0 }: cartItem) {
 								<div className=" p-0 rounded-full bg-[#EA9630] text-white flex justify-center items-center text-lg font-normal w-6 h-6">+</div>
 								<span className="font-medium text-sm font-dark-1">{item.count}</span>
 								<div className=" p-0 rounded-full bg-[#FCEFDC] text-[#EA9630] flex justify-center items-center text-lg font-medium w-6 h-6">-</div>
-								<span className="ml-auto font-medium text-sm font-neutral-1">{item.total} IDR</span>
+								<span className="ml-auto font-medium text-xs md:text-sm font-neutral-1">{item.total} IDR</span>
 							</div>
 							
 						</div>
@@ -42,7 +42,7 @@ export default function Cartbar({ subTotal = "0", orderCount = 0 }: cartItem) {
 					<button className="btn-secondary">Start over</button>
 					<button className="btn-tertiary">Back</button>
 				</div>
-				<div className="flex items-center gap-5.5">
+				<div className="flex items-center gap-3.5 md:gap-5.5">
 					<div className="flex items-center gap-1 md:gap-2">
 						<div className="flex flex-col items-end gap-0">
 							<span className="font-dark-1 text-[0.7rem]">Subtotal</span>
@@ -55,7 +55,8 @@ export default function Cartbar({ subTotal = "0", orderCount = 0 }: cartItem) {
 							</div>
 						</div>
 					</div>
-					<Link href="/checkout" className="btn-primary">Continue</Link>
+					{/* <Link href="/checkout" className="btn-primary btn-pulse">Continue</Link> */}
+					<Link href="/checkout" className="btn-primary btn-pulse">Continue</Link>
 				</div>
 			</div>
 		</div>

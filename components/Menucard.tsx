@@ -18,11 +18,11 @@ interface MenucardProps {
 
 export default function Menucard({ menuItems }: MenucardProps) {
    return (
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3.5 md:gap-5">
          {menuItems.map((item: MenuItem, i: number) => (
             <div key={i} className="flex-col gap-2">
                <div className={cn(
-                     "flex items-center justify-center h-[10rem] rounded-xl p-3 relative",
+                     "flex items-center justify-center h-[8rem] md:h-[12.5rem] rounded-xl p-3 relative",
                      item.isAvail === "N" ? "bg-[#F5F5F5]" : "bg-[#F7F2EA]"
                   )}>
                   <img

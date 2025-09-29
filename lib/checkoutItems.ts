@@ -1,7 +1,7 @@
 export const checkoutItems = [
 	{
 		label: "Deluxe Sandwich Combo Meal",
-		desc: "Nashville Crispy Fillet, Bacon Strips, Avocado Slices",
+		desc: "Nashville Crispy Fillet, Bacon Strips",
 		count: 2,
 		total: "210.000",
 		img: "/images/menu/cart-1.png",

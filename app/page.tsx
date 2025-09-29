@@ -3,8 +3,8 @@ import Cartbar from "@/components/Cartbar";
 import Menucard from "@/components/Menucard";
 
 const bannerItems = [
-	{ img: "/images/home-banner-1.png", colorGrad: "#7E2200", titleSm: "", titleMd: "Matcha & Latte" },
-	{ img: "/images/home-banner-2.png", colorGrad: "#5C1819", titleSm: "", titleMd: "Fresh Coffee" },
+	{ img: "/images/home-banner-1.png", colorGrad: "#7E2200", titleSm: "Autumn Specials", titleMd: "Matcha & Latte" },
+	{ img: "/images/home-banner-5.jpg", colorGrad: "#013116", titleSm: "Fresh Greens", titleMd: "Fresh Salads" },
 ];
 
 const filterItems = [
@@ -75,14 +75,14 @@ export default function Home() {
 							<div
 								className="absolute inset-0 w-full h-full z-20 rounded-xl"
 								style={{
-									background: `linear-gradient(to top, ${item.colorGrad} 10%, transparent 50%)`,
+									background: `linear-gradient(to top, ${item.colorGrad} 10%, transparent 75%)`,
 								}}
 							></div>
 							<div className="relative h-full flex flex-col items-start justify-end p-2 md:p-3 z-30 text-white">
-								<span className=" text-xs font-light">
-									Cozy up with autumn specials
+								<span className="text-xs md:text-[0.8rem] font-light md:font-normal">
+									{item.titleSm}
 								</span>
-								<h4 className="lg:text-xl font-semibold leading-5 md:leading-6 mt-0.5 lg:mt-1.5 mb-1">
+								<h4 className="lg:text-[1.4rem] font-semibold leading-5 md:leading-6 mt-0.5 lg:mt-1.5 mb-1">
 									{item.titleMd}
 								</h4>
 								<button className="button-banner mt-2.5 w-full md:w-max">Order now</button>
@@ -92,18 +92,18 @@ export default function Home() {
 
 					<div className="hidden md:block col-span-2 lg:col-span-1 h-[10rem] md:h-[14rem] rounded-xl relative">
 						<img
-							src="/images/home-banner-3.png"
+							src="/images/home-banner-4.webp"
 							alt="burger background"
 							className="absolute inset-0 w-full h-full object-cover rounded-xl z-10"
 						></img>
-						<div className="absolute inset-0 w-full h-full z-20 rounded-xl bg-linear-to-r lg:bg-linear-to-t from-[#013116] from-15% lg:from-10% to-transparent to-50%"></div>
+						<div className="absolute inset-0 w-full h-full z-20 rounded-xl bg-linear-to-r lg:bg-linear-to-t from-[#5C1819] from-15% lg:from-10% to-transparent to-50%"></div>
 						{/* style={{
-									background: `linear-gradient(to top, ${item.colorGrad} 10%, transparent 50%)`,
+									background: `linear-gradient(to top, ${item.colorGrad} 10%, transparent 50%)`, 5C1819
 								}} */}
 						<div className="relative h-full flex flex-col items-start justify-end p-3 z-30 text-white">
 							<span className="text-xs font-light">Vegan burger</span>
-							<h4 className="text-lg font-semibold max-w-[10rem] lg:max-w-max leading-6 mt-1 mb-1">
-								Taste like real chicken burger
+							<h4 className="text-lg md:text-xl font-semibold max-w-[10rem] lg:max-w-max leading-6 mt-1 mb-1">
+								Tastes Like a Real Burger
 							</h4>
 							<button className="button-banner mt-2.5">Order now</button>
 						</div>
@@ -113,11 +113,11 @@ export default function Home() {
 				</div>
 
 				{/* Filter */}
-				<div className="flex gap-3 overflow-x-auto max-w-[70vw]">
+				<div className="flex gap-3 pb-2 md:pb-4 overflow-x-auto scrollbar-hidden max-w-[60vw] md:max-w-[90vw] lg:max-w-[70vw]">
 					{filterItems.map((item, index) => (
 						<div
 							key={index}
-							className="rounded-xl flex shrink-0 gap-2 items-center px-3 py-2"
+							className="rounded-xl flex shrink-0 gap-2 items-center px-3 py-1 md:py-2"
 							style={{
 								backgroundColor: item.bgColor,
 								color: item.txtColor,
@@ -138,7 +138,7 @@ export default function Home() {
 			</section>
 
 			{/* Recommendation */}
-			<section className="mt-3 md:mt-5 mb-[4.5rem]">
+			<section className="mt-1 md:mt-0 mb-[4.5rem]">
 				<h2 className="mb-3 text-sm lg:text-lg font-dark-1 font-normal">
 					Recommendation
 				</h2>
