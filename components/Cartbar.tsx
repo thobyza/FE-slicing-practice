@@ -37,16 +37,16 @@ export default function Cartbar({ subTotal = "0", orderCount = 0 }: cartItem) {
 				</div>
 			)}
 
-			<div className="bg-white p-4 flex justify-between items-center border-t border-[#E6E6E6]">
+			<div className="bg-white p-2.5 md:p-4 flex justify-between items-center border-t border-[#E6E6E6]">
 				<div className="flex gap-2">
-					<button className="btn-secondary text-base">Start over</button>
-					<button className="btn-tertiary text-base">Back</button>
+					<button className="btn-secondary">Start over</button>
+					<button className="btn-tertiary">Back</button>
 				</div>
 				<div className="flex items-center gap-5.5">
-					<div className="flex items-center gap-2">
+					<div className="flex items-center gap-1 md:gap-2">
 						<div className="flex flex-col items-end gap-0">
 							<span className="font-dark-1 text-[0.7rem]">Subtotal</span>
-							<span className="font-primary text-base font-semibold">{subTotal} IDR</span>
+							<span className="font-primary text-sm md:text-base font-semibold">{subTotal} IDR</span>
 						</div>
 						<div className="relative">
 							<img src="/images/cart-icon.png" alt="beverage icon" className="h-[2.4rem] object-cover"/>
@@ -55,7 +55,7 @@ export default function Cartbar({ subTotal = "0", orderCount = 0 }: cartItem) {
 							</div>
 						</div>
 					</div>
-					<Link href="/checkout" className="btn-primary text-base">Continue</Link>
+					<Link href="/checkout" className="btn-primary">Continue</Link>
 				</div>
 			</div>
 		</div>

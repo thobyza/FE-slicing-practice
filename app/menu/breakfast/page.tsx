@@ -30,14 +30,15 @@ export default function BreakfastPage() {
       <section className="flex flex-col w-full">
          {/* Title */}
          <div>
-            <h1 className="text-4xl font-bold max-w-[18rem] font-dark-1">
+            <h1 className="text-xl md:text-3xl font-bold max-w-[18rem] font-dark-1">
                Breakfast
             </h1>
-            <span className="mt-2 text-sm font-neutral-2">Breakfast is served until 12.00, get your favorites before they’re gone!</span>
+            <span className="hidden md:block mt-2 lg:mt-6 text-sm lg:text-md font-neutral-2">Breakfast is served until 12.00, get your favorites before they’re gone!</span>
+            <span className="md:hidden mt-2 lg:mt-6 text-sm lg:text-md font-neutral-2">Breakfast is served until 12.00</span>
          </div>
 
          {/* Banner */}
-         <div className="h-[9.5rem] mt-5 rounded-xl relative">
+         <div className="h-[9.5rem] lg:h-[12rem] mt-2.5 md:mt-5 rounded-xl relative">
             <img
                src="/images/home-banner-3.png"
                alt="burger background"
@@ -45,8 +46,8 @@ export default function BreakfastPage() {
             ></img>
             <div className="absolute inset-0 w-full h-full z-20 rounded-xl bg-linear-to-r from-[#013116] from-15% to-transparent to-50%"></div>
             <div className="relative h-full flex flex-col items-start justify-end p-3 z-30 text-white">
-               <span className="text-xs font-light">Vegan burger</span>
-               <h4 className="text-lg font-semibold max-w-[10rem] leading-6 mt-1 mb-1">
+               <span className="text-xs lg:text-md font-light">Vegan burger</span>
+               <h4 className="text-lg lg:text-2xl font-semibold max-w-[10rem] lg:max-w-max leading-6 mt-1 lg:mt-2 mb-1">
                   Taste like real chicken burger
                </h4>
                <button className="button-banner mt-2.5">Order now</button>
@@ -54,17 +55,17 @@ export default function BreakfastPage() {
          </div>
 
          {/* Filter */}
-         <div className="py-3 mt-3 w-full overflow-x-auto scrollbar-hidden max-w-[30rem]">
+         <div className="py-3 mt-0.5 md:mt-3 w-full overflow-x-auto scrollbar-hidden max-w-[70vw] md:max-w-[30rem] lg:max-w-fit">
             <div className="flex gap-2">
                {filterItems.map((item, i) => (
                   <div 
                      key={i} 
                      className={cn(
-                        "flex items-center shrink-0 gap-1 pl-3.5 pr-7 py-2 rounded-[0.6rem]",
+                        "flex items-center shrink-0 gap-1 px-4 py-2 rounded-[0.6rem] cursor-pointer",
                         item.isSelected
                            ? "bg-[#F05D26] text-white"
                            : item.isPromo
-                              ? "bg-[#FEF0EA] pl-2.5"
+                              ? "bg-[#FEF0EA] pl-3"
                               : "bg-[#F5F5F5]"
                      )}
                   >
@@ -81,7 +82,7 @@ export default function BreakfastPage() {
 
          {/* Menu */}
          <Menucard menuItems={menuCardItems}/>
-         <div className="mb-[15rem]"></div>
+         <div className="pb-[20rem]"></div>
 
          {/* Cart */}
          <Cartbar orderCount={9} subTotal="387.000"/>

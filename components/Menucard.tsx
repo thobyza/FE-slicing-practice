@@ -18,7 +18,7 @@ interface MenucardProps {
 
 export default function Menucard({ menuItems }: MenucardProps) {
    return (
-      <div className="grid grid-cols-3 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
          {menuItems.map((item: MenuItem, i: number) => (
             <div key={i} className="flex-col gap-2">
                <div className={cn(

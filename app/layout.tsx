@@ -22,11 +22,12 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${inter.className} bg-gray-100`}>
-				<div className="flex min-h-screen max-w-7xl mx-auto">
+				
+					<div className="flex max-w-7xl mx-auto">
 					{!isCheckoutPage && <Sidebar />}
 
 					{/* Main */}
-					<main className="flex-1 p-4 relative">{children}</main>
+					<main className="flex-1 p-2 md:p-4 relative">{children}</main>
 				</div>
 			</body>
 		</html>

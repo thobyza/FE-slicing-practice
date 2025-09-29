@@ -9,13 +9,13 @@ export default function CheckoutPage() {
             src="/images/sidebar/chick-fil-a.png" 
             className="object-cover w-[6rem] mx-auto">
          </img>
-         <div className="flex items-center gap-4 mt-4 pb-4 border-b-1 border-[#E6E6E6]">
+         <div className="flex items-center justify-center gap-4 mt-3 md:mt-4 pb-3 md:pb-4 border-b-1 border-[#E6E6E6]">
             <button className="btn-primary text-[0.8rem]">5 items</button>
-            <h1 className="font-dark-1 text-3xl font-semibold">Your Order</h1>
+            <h1 className="font-dark-1 text-xl md:text-3xl font-semibold">Your Order</h1>
          </div>
 
          {/* Items */}
-         <div className="flex flex-col gap-3.5 mt-4 mb-[7.5rem]">
+         <div className="flex flex-col gap-3.5 mt-4 mb-[15rem]">
             {checkoutItems.map((item, i) => (
                <div key={i} className="flex flex-col gap-2.5 rounded-xl p-3 bg-white w-full relative border border-[#E6E6E6]">
                   <div className="flex items-center gap-4">
@@ -25,11 +25,11 @@ export default function CheckoutPage() {
                         <span className="font-neutral-2 line-clamp-1 truncate text-xs font-normal">{item.desc}</span>
                      </div>
                   </div>
-                  <div className="flex justify-between items-center gap-3 truncate ">
+                  <div className=   "flex justify-between items-center gap-3 truncate ">
                      <div className=" p-0 rounded-full bg-[#EA9630] text-white flex justify-center items-center text-lg font-normal w-6 h-6">+</div>
                      <span className="font-medium text-sm font-dark-1">{item.count}</span>
                      <div className=" p-0 rounded-full bg-[#FCEFDC] text-[#EA9630] flex justify-center items-center text-lg font-medium w-6 h-6">-</div>
-                     <div className="flex gap-1 ml-1">
+                     <div className="flex gap-0.5 md:gap-1 ml-1">
                         <div className="flex items-center gap-1 py-2 px-3 bg-[#F5F5F5] rounded-lg">
                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
                               strokeLinecap="round" strokeLinejoin="round" className="w-3 h-3">
@@ -48,7 +48,7 @@ export default function CheckoutPage() {
                         </div>
                      </div>
 
-                     <span className="ml-auto font-medium text-base font-neutral-1">{item.total} IDR</span>
+                     <span className="ml-auto font-medium text-sm md:text-base font-neutral-1">{item.total} IDR</span>
                   </div>
 
                </div>
@@ -57,7 +57,7 @@ export default function CheckoutPage() {
          
          {/* Cart */}
          <div className="fixed bottom-0 left-0 right-0 w-full">
-            <div className=" p-4 flex flex-col gap-1 items-end bg-[#F5F5F5]">
+            <div className="px-4 py-3 md:py-4 md:px-6  flex flex-col gap-1 items-end bg-[#F5F5F5]">
                <div className="flex gap-5">
                   <span className="font-neutral-1 text-sm">Subtotal</span>
                   <span className="font-dark-1 text-sm font-semibold">387.000 IDR</span>
@@ -67,19 +67,20 @@ export default function CheckoutPage() {
                   <span className="font-dark-1 text-sm font-semibold">20.000 IDR</span>
                </div>
             </div>
-            <div className="p-4 flex justify-between bg-[#F5F5F5] border-t border-[#E6E6E6]">
+            <div className="px-4 py-3 md:py-4 md:px-6 flex justify-between bg-[#F5F5F5] border-t border-[#E6E6E6]">
                <span className="font-dark-1 text-base font-semibold">Total payment</span>
                <span className="font-primary text-lg font-semibold">363.000 IDR</span>
             </div>
 
-            <div className="bg-white p-4 flex justify-between items-center">
-               <div className="flex gap-2">
+            <div className="bg-white px-2 py-3 md:p-4 flex justify-between items-center">
+               <div className="flex gap-1.5 md:gap-2">
                   <Link href="/" className="btn-secondary text-base">Start over</Link>
                   <Link href="/" className="btn-tertiary text-base">Back</Link>
                </div>
-               <div className="flex items-center gap-2.5">
+               <div className="flex items-center gap-1.5 md:gap-2.5">
                   <button className="btn-default text-base">Promo code</button>
-                  <button className="btn-primary text-base">Proceed to payment</button>
+                  <button className="hidden md:block btn-primary text-base">Proceed to payment</button>
+                  <button className="md:hidden btn-primary text-base">Payment</button>
                </div>
             </div>
          </div>
